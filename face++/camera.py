@@ -46,25 +46,3 @@ def camera(cam_addr, outer_id):
         else:
             i += 1
 
-
-#######################################################################
-
-
-def listen():
-    global flag
-    while True:
-        flag = int(input())
-
-
-#######################################################################
-
-
-def thread(cam_addr, outer_id):
-    th1 = threading.Thread(target=camera,args=(cam_addr, outer_id))
-    th2 = threading.Thread(target=listen)
-    threads = [th1, th2]
-
-    for t in threads:
-        t.setDaemon(True)
-        t.start()
-    t.join()
