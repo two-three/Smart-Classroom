@@ -5,7 +5,7 @@ csvfilepath = "./faces/face_token.csv"
 create_faceset(outer_id, csvfilepath)
 print("初始化人脸数据集\n")
 
-cam_addr = ''
+cam_addr = 'rtsp://admin:123456@192.168.1.100//Streaming/Channels/1'
 outer_id = 'yfacesy'
 camera(cam_addr, outer_id)
 
